@@ -9,10 +9,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-@SpringBootTest
+@SpringBootTest(classes= PostMapper.class)
 public class PostMapperTest {
-    //@Autowired중
+
     PostMapper postMapper;
+    @Autowired
+    void setPostMapper(PostMapper postMapper){
+        this.postMapper = postMapper;
+    }
 
     @Test
     void save() {

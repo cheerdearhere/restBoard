@@ -1,0 +1,4 @@
+# column name to camel case
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
